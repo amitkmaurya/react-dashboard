@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@datatables.net":"registry=https://npm.datatables.net/",
+    "npm.datatables.net/":"authToken=B1F30EA786E4E8984162368E8B2F307A96C2C0838D9D36BDB256D94FE9B07C3C",
+    "@ant-design/charts": "^1.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

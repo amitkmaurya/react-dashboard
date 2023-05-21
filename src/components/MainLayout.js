@@ -27,8 +27,8 @@ import {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={['']}
-            onClick={({key}) => {
-              if (key == "signout") {
+            onClick={({ key }) => {
+              if (key === "signout") {
 
               } else {
                 navigate(key);
@@ -39,26 +39,89 @@ import {
                 key: '',
                 icon: <AiOutlineDashboard className='fs-4' />,
                 label: 'Dashboard',
-              },
-              {
-                key: 'customers',
-                icon: <AiOutlineUser className='fs-4' />,
-                label: 'Customers',
-              },
-              {
-                key: 'Catalog',
-                icon: <AiOutlineShoppingCart className='fs-4' />,
-                label: 'Catalog',
                 children: [
                   {
-                    key: 'Product',
-                    icon: <AiOutlineShoppingCart />,
-                    label: 'Add Product',
+                    key: '',
+                    icon: <AiOutlineUser className='fs-4' />,
+                    label: 'My Dashboard'
                   },
                   {
-                    key: 'product-list',
+                    key: 'change-password',
+                    icon: <AiOutlineUser className='fs-4' />,
+                    label: 'Change Password'
+                  }
+                ]
+              },
+              {
+                key: 'super-distributors',
+                icon: <AiOutlineShoppingCart className='fs-4' />,
+                label: 'Super Distributors',
+                children: [
+                  {
+                    key: 'create-super-distributors',
                     icon: <AiOutlineShoppingCart />,
-                    label: 'Product List',
+                    label: 'Create Supper Distributors',
+                  },
+                  {
+                    key: 'view-super-distributor',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'View Super Distributors',
+                  },
+                ]
+              },
+              {
+                key: 'distributors',
+                icon: <AiOutlineUser className='fs-4' />,
+                label: 'Distributors',
+                children: [
+                  {
+                    key: 'create-distributors',
+                    icon: <AiOutlineUser className='fs-4' />,
+                    label: 'Create Distributor', 
+                  },
+                  {
+                    key: 'view-distributors',
+                    icon: <AiOutlineUser className='fs-4' />,
+                    label: 'View Distributors', 
+                  },
+                ]
+              },
+              {
+                key: 'retailers',
+                icon: <AiOutlineShoppingCart className='fs-4' />,
+                label: 'Retailer',
+                children: [
+                  {
+                    key: 'create-retailers',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'Create Retailers',
+                  },
+                  {
+                    key: 'view-retailers',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'View Reatilers',
+                  },
+                  {
+                    key: 'onboard-retailers',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'Onboard Reatilers',
+                  },
+                ]
+              },
+              {
+                key: 'reports',
+                icon: <AiOutlineShoppingCart className='fs-4' />,
+                label: 'Reports',
+                children: [
+                  {
+                    key: 'ledger-report',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'Ledger Report',
+                  },
+                  {
+                    key: 'GST-Report',
+                    icon: <AiOutlineShoppingCart />,
+                    label: 'GST Report',
                   },
                 ]
               },
@@ -66,7 +129,8 @@ import {
           />
         </Sider>
         <Layout className="site-layout">
-          <Header
+          <Header 
+          className='d-flex justify-content-between ps-2 pe-5'
             style={{
               padding: 0,
               background: colorBgContainer,
@@ -76,6 +140,18 @@ import {
               className: 'trigger',
               onClick: () => setCollapsed(!collapsed),
             })}
+            <div className="d-flex gap-3 align-items-center">
+              <div className="d-flex">
+                <img
+                width={32}
+                height={32}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4sV-EIOOGwZH_r5FmHfGrKYpVusf1ZO-tiYNyw3JoMw&usqp=CAU&ec=48600113" alt="user" />
+              </div>
+              <div className="d-flex flex-column">
+              <h5 className='mb-0'>User Name</h5>
+              <p className='mb-0'>example@gmail.com</p>
+              </div>
+            </div>
           </Header>
           <Content
             style={{

@@ -44,7 +44,12 @@ body {
   height:64px;
 }
 main {
+  height: 80vh;
   overflow-y: scroll;
+  background-color: transparent !important;
+}
+main::-webkit-scrollbar{
+  width: 0px;
 }
 .sm-logo {
   display: none;
@@ -57,4 +62,18 @@ main {
 }
 .ant-menu-title-content {
   font-size: 16px !important;
+}
+.ant-layout-header h5, p {
+  line-height: 20px;
+  font-size: 15px;
+}
+.ant-layout-header p {
+  line-height: 20px;
+  font-size: 13px;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
 }
