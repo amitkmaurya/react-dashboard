@@ -77,3 +77,21 @@ main::-webkit-scrollbar{
 .red {
   color: red;
 }
+:where(.css-dev-only-do-not-override-1e3x2xa).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-1e3x2xa).ant-table-wrapper .ant-table-thead >tr>td {
+  color: #ffffff !important;
+  background: #001529 !important;
+  border-bottom: 1px solid #f0f0f0;
+}
+:where(.css-dev-only-do-not-override-1e3x2xa).ant-table-wrapper .ant-table-tbody >tr >td {
+  transition: background 0.2s,border-color 0.2s;
+  border: 1px solid #f0f0f0;
+  background: #ffffff !important;
+}
+:where(.css-dev-only-do-not-override-1e3x2xa).ant-table-wrapper .ant-table-thead>tr>th {
+  padding: 0.25rem 0.75rem;
+}
+:where(.css-dev-only-do-not-override-1e3x2xa).ant-btn-primary {
+  color: #fff;
+  background-color: #001529 !important;
+  box-shadow: 0 2px 0 #001529 !important;
+}
